@@ -1,0 +1,17 @@
+{
+  "name": "nest_monorepo_template-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "implicitDependencies": ["nest_monorepo_template"],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
+      "options": {
+        "jestConfig": "apps/nest_monorepo_template-e2e/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "dependsOn": ["nest_monorepo_template:build"]
+    }
+  }
+}

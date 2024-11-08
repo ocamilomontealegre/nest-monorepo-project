@@ -1,7 +1,9 @@
 export default {
-  displayName: 'nest_monorepo_template-e2e',
+  displayName: 'app-e2e',
   preset: '../../jest.preset.js',
-  setupFiles: ['<rootDir>/src/test-setup.ts'],
+  globalSetup: '<rootDir>/src/support/global-setup.ts',
+  globalTeardown: '<rootDir>/src/support/global-teardown.ts',
+  setupFiles: ['<rootDir>/src/support/test-setup.ts'],
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': [
@@ -12,5 +14,5 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/nest_monorepo_template-e2e',
+  coverageDirectory: '../../coverage/app-e2e',
 };

@@ -34,7 +34,15 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/nest_monorepo_template-e2e/**/*"]
+      "exclude": ["apps/nest_monorepo_template-e2e/**/*", "apps/app-e2e/**/*"]
+    },
+    {
+      "plugin": "@nx/webpack/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
+      }
     }
   ]
 }
